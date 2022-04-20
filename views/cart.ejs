@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html webcrx="">
+        <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shopping Cart</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="/stylesheets/cartstyle.css" media="screen" title="no title" charset="utf-8">
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+      <script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.js" charset="utf-8"></script>
+      
+
+  </head>
+<body>
+   
+   
+    <header class="header">
+
+        <div class="he1">
+
+            <a href="index.html" class="logo"><i class="fa-solid fa-book"></i> BOOKLAND </a>
+
+          
+            <div class="icons">
+                <div id="login-btn" class="fa-regular fa-user"></div>
+                <a href="/">Sign in / Register </a>  
+                <span>|</span>
+                <a href="/panier" class="fa-solid fa-cart-shopping"></a>
+                <a href="/panier">Shopping Cart</a>            
+            </div>
+    
+        </div>
+    
+        <div class="he2">
+            <nav class="navbar">
+                <a href="/">home</a>
+                <a href="/">featured</a>
+                <a href="/">arrivals</a>
+                <a href="/">reviews</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="home-content">
+        <div class="shopping-cart">
+          <div class="top">
+            <div class="title">
+              Shopping cart
+            </div>
+            <div class="cont">
+                <a href="/" class="continue">continue Shopping</a>
+            </div>
+          </div>
+          <% books.forEach((image) => { %>
+            <div class="item">
+              <div class="buttons">
+                <span class="delete-btn"></span>
+                <span class="heart-btn"></span>
+              </div>
+      
+              <div class="image">
+                <img src="data:image/<%=image.image.contentType%>;base64,
+                <%=image.image.data.toString('base64')%>" alt="">
+              </div>
+      
+              <div class="description">
+                <span><%=image.title%></span>
+                <span><%=image.author%></span>
+              
+              </div>
+              <div class="quantity">
+                <button class="plus-btn" type="button" name="button">
+                  <img src="images/plus.svg" alt="">
+                </button>
+                <input type="text" name="name" value="1">
+                <button class="minus-btn" type="button" name="button">
+                  <img src="images/minus.svg" alt="">
+                </button>
+              </div>
+      
+              <div class="total-price"><%=image.price%>DT</div>
+            </div>
+            <%})%>
+              <div class="REMOVEALL">
+              <button class="rem clear"> <i class="fa-regular fa-trash-can"></i> Remove All</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="home-contenttt">
+        <div class="total ">
+            <p class="text-left">Subtotal : (<%=totalElements%> Items)</p>
+            <h6 class=" text-right"><%=totalPrice%> DT</h6>
+        </div>
+        <div class="total">
+            <p class=" text-left">Shipping :</p>
+            <h6 class=" text-right">FREE</h6>
+        </div>
+        <div class="total">
+            <p class="to">Total :</p>
+            <h6 class=" text-right"><%=totalPrice%> DT</h6>
+        </div> 
+        <form action="/panier/checkout">
+        <div class="REMOVEALL" id="checkout">
+            
+            <button type="submit" class="rem">Checkout <i class="fa-solid fa-arrow-right"></i></button>
+       
+          </div>
+        </form>
+        </div>
+
+    </section>
+    <section class="home" id="home">
+       
+        <div class="row">
+            <div class="bestsellers">
+            <div class="content">
+               
+                <h3>Inspired by your browsing history </h3>
+               
+            </div>
+           
+            <div class="btn-seeall">
+                <a href="products.html"> <span></span> VIEW ALL </a>
+            </div>
+             </div>
+
+            <div class="swiper books-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide"><img src="images/bo31.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo1.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo35.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo12.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo15.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo2.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo30.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo28.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo29.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo11.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo4.PNG" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="images/bo17.PNG" alt=""></a>
+                    
+                   
+                </div>
+                
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="logo">
+            <a href="#" class="logo"><i class="fa-solid fa-book"></i> BOOKLAND </a>
+        </div>
+        <div class="links">
+            <h1>Links</h1>
+            <a href="#home">Home</a><br><br>
+            <a href="#featured">Featured</a><br><br>
+            <a href="#arrivals">Arrivals</a><br><br>
+            <a href="#reviews">Reviews</a>
+        </div>
+        <div class="cn">
+            <h1>Contacts</h1><br>
+            <a href="#"> <i class="fa-solid fa-phone"> </i>+216 99 11 59 16</a><br><br>
+           
+            <a href="#"><i class="fa-solid fa-envelope">  </i>BOOKLAND@gmail.com</a> <br><br>
+          
+            <a href="#"><i class="fa-solid fa-location-dot"></i> Sousse </a>
+           
+        </div>
+        
+        <div class="sm">
+            <h1>Follow Us</h1>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://fr.linkedin.com/" class="fab fa-linkedin"></a><br>
+            <a href="https://www.pinterest.fr/" class="fab fa-pinterest"></a>
+            <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+          
+         
+        </div>
+        </section>
+    
+        <script type="text/javascript">
+          $(".clear").on('click', async (e) => {
+            console.log("clear")
+            const res = await fetch("http://localhost:3000/panier/clear", {
+              method: "GET",
+              mode: "cors", 
+              cache: "no-cache",
+              credentials: "same-origin", 
+            })
+          })
+        </script>
+    <script type="text/javascript">
+        $('.minus-btn').on('click', function(e) {
+              e.preventDefault();
+              var $this = $(this);
+              var $input = $this.closest('div').find('input');
+              var value = parseInt($input.val());
+
+              var price = $("div.total-price")[0].innerHTML
+              subPrice = "";
+              i = 0
+              while (true){
+                if (price[i] == "D") {
+                  break;
+                }
+                subPrice += price[i];
+                i++;
+              }
+              console.log(subPrice);
+  
+              if (value > 1) {
+                  value = value - 1;
+              } else {
+                  value = 0;
+              }
+  
+          $input.val(value);
+  
+          });
+  
+          $('.plus-btn').on('click', function(e) {
+              e.preventDefault();
+              var $this = $(this);
+              var $input = $this.closest('div').find('input');
+              var value = parseInt($input.val());
+  
+              if (value < 100) {
+                value = value + 1;
+              } else {
+                  value = 100;
+              }
+  
+              $input.val(value);
+          });
+  
+        $('.heart-btn').on('click', function() {
+          $(this).toggleClass('is-active');
+        });
+
+
+var swiper = new Swiper(".books-slider", {
+ 
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+  
+    },
+ breakpoints: {
+   0: {
+     slidesPerView: 1,
+ 
+    },
+   450: {
+     slidesPerView: 2,
+    },
+
+   768: {
+     slidesPerView: 3,
+    },
+   1024: {
+     slidesPerView: 4,
+     },
+ 
+   
+  },
+});
+
+
+    </script>
+
+
+
+</body>
+</html>

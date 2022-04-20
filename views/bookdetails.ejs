@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKDETAILS</title>
+    <link rel="stylesheet" href="/stylesheets/bookdetailsSTYLE.CSS" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="he1">
+        <a href="/home" class="logo"
+          ><i class="fa-solid fa-book"></i> BOOKLAND
+        </a>
+
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="Search by Title, Author ..."
+            id="search-box"
+          />
+          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </form>
+
+        <div class="icons">
+          <div id="login-btn" class="fa-regular fa-user"></div>
+          <a href="/auth">Sign in / Register </a>
+          <span>|</span>
+          <a href="wishlist.html" class="fa-regular fa-heart"></a>
+          <a href="wishlist.html">Wishlist </a>
+          <span>|</span>
+          <a href="cart.html" class="fa-solid fa-cart-shopping"></a>
+          <a href="cart.html">Shopping Cart</a>
+        </div>
+      </div>
+
+      <div class="he2">
+        <nav class="navbar">
+          <a href="/home">home</a>
+          <a href="/home">featured</a>
+          <a href="/home">arrivals</a>
+          <a href="/home">reviews</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <center>
+      <div class="home-content">
+        <DIV class="image">
+          <img
+            src="data:image/<%=item.image.contentType%>;base64,
+          <%=item.image.data.toString('base64')%>"
+            alt=""
+          />
+        </DIV>
+        <div class="details">
+          <h2><%= item.title %></h2>
+          <br />
+          <h4>By <a href=""><%= item.author %></a></h4>
+          <br />
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <br /><br />
+          </div>
+          <div class="border"></div>
+          <div class="check">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>AVAILABLE</p>
+          </div>
+
+          <div class="boutons">
+            <a href="#" class="btn"> ADD TO CART </a>
+          </div>
+
+          <div class="descr">
+            <h3>Description :</h3>
+            <p><%= item.description %></p>
+          </div>
+          <div class="bookdetails">
+            <h3>Book Details :</h3>
+            <table>
+              <tr>
+                <td class="a">Price :</td>
+                <td><%= item.price %>DT</td>
+              </tr>
+              <tr>
+                <td class="a">Language :</td>
+                <td><%=item.language %></td>
+              </tr>
+              <tr>
+                <td class="a">Pages :</td>
+                <td><%= item.pages %> Pages</td>
+              </tr>
+              <tr>
+                <td class="a">Year :</td>
+                <td><%= item.year %></td>
+              </tr>
+              <tr>
+                <td class="a">Rating :</td>
+                <td>4,5 sur 5</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </center>
+
+    <section class="contact" id="contact">
+      <div class="logo">
+        <a href="#" class="logo"><i class="fa-solid fa-book"></i> BOOKLAND </a>
+      </div>
+      <DIV class="links">
+        <h1>Links</h1>
+        <a href="#home">Home</a><br /><br />
+        <a href="#featured">Featured</a><br /><br />
+        <a href="#arrivals">Arrivals</a><br /><br />
+        <a href="#reviews">Reviews</a>
+      </DIV>
+      <div class="cn">
+        <h1>Contacts</h1>
+        <br />
+        <a href="#"> <i class="fa-solid fa-phone"> </i>+216 99 11 59 16</a
+        ><br /><br />
+
+        <a href="#"><i class="fa-solid fa-envelope"> </i>BOOKLAND@gmail.com</a>
+        <br /><br />
+
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Sousse </a>
+      </div>
+
+      <div class="sm">
+        <h1>Follow Us</h1>
+        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+        <a href="https://fr.linkedin.com/" class="fab fa-linkedin"></a><br />
+        <a href="https://www.pinterest.fr/" class="fab fa-pinterest"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/javascripts/detailsscript.js"></script>
+  </body>
+</html>

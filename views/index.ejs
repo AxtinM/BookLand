@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>HOMEPAGE</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="he1">
+        <a href="#" class="logo"><i class="fa-solid fa-book"></i> BOOKLAND </a>
+
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="Search by Title, Author ..."
+            id="search-box"
+          />
+          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </form>
+
+        <div class="icons">
+          <div id="login-btn" class="fa-regular fa-user"></div>
+          <a href="/auth">Sign in / Register </a>
+          <span>|</span>
+          <a href="/panier" class="fa-regular fa-heart"></a>
+          <a href="/panier">Wishlist </a>
+          <span>|</span>
+          <a href="/panier" class="fa-solid fa-cart-shopping"></a>
+          <a href="/panier">Shopping Cart</a>
+        </div>
+      </div>
+
+      <div class="he2">
+        <nav class="navbar">
+          <a href="#home">home</a>
+          <a href="#featured">featured</a>
+          <a href="#arrivals">arrivals</a>
+          <a href="#reviews">reviews</a>
+          <a href="#contact">contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="home-image">
+      <img src="/images/livre.png" alt="" />
+      <div class="home-text">
+        <h2>
+          Welcome to the <br /><span><b> BOOKLAND</b></span>
+        </h2>
+        <p>
+          The online Bookstore where you can <br />
+          find all your favourite books and get <br />
+          them without going out of your house .
+        </p>
+        <br /><br />
+        <a href="#featured"> <span></span> LET'S SHOP </a>
+      </div>
+    </div>
+
+    <section class="iconss" id="home">
+      <div class="icons">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="content">
+          <h3>Free Shipping</h3>
+          <p>Order over 80DT</p>
+        </div>
+      </div>
+
+      <div class="icons">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <div class="content">
+          <h3>Secure Payment</h3>
+          <p>100% Secure Payment</p>
+        </div>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+          <h3>Easy returns</h3>
+          <p>15 days returns</p>
+        </div>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+          <h3>24/7 Support</h3>
+          <p>Call us anytime</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home" id="home">
+      <div class="row">
+        <div class="bestsellers">
+          <div class="content">
+            <h3>Best Of All Time Out Of Stock</h3>
+          </div>
+
+          <div class="btn-seeall">
+            <a href="#"> <span></span> VIEW ALL </a>
+          </div>
+        </div>
+
+        <div class="swiper books-slider">
+          <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo29.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo1.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo9.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo12.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo11.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo2.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo30.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo4.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo28.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo15.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo16.PNG" alt=""
+            /></a>
+            <a href="#" class="swiper-slide"
+              ><img src="/images/bo14.PNG" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="FF">
+        <div class="FEAT">
+          <h1>featured Products</h1>
+        </div>
+
+        <div class="btn-seeall">
+          <a href="#"> <span></span> VIEW ALL </a>
+        </div>
+      </div>
+
+      <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+          <% items.forEach((image) => { %>
+          <div class="swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fa-regular fa-heart"></a>
+              <a href="#" class="fa-regular fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                src="data:image/<%=image.image.contentType%>;base64,
+              <%=image.image.data.toString('base64')%>"
+              />
+            </div>
+            <div class="content">
+              <h3><%= image.title%></h3>
+              <div class="price">
+                <%= image.price%> DT <span>99.99 DT</span>
+              </div>
+              <button id="<%=image._id%>" onclick="add(this)">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+
+    <section class="imagee">
+      <img
+        class="mobile-hide"
+        src="https://cdn.waterstones.com/images/00221328-1920x217.jpeg"
+      />
+    </section>
+
+    <section class="arrivals" id="arrivals">
+      <div class="FF">
+        <div class="FEAT">
+          <h1>Our Books</h1>
+        </div>
+
+        <div class="btn-seeall">
+          <a href="#"> <span></span> VIEW ALL </a>
+        </div>
+      </div>
+      <div class="swiper arrivals-slider">
+        <div class="swiper-wrapper">
+          <% items.forEach(image => { %>
+          <a href="/books/<%=image._id%>" class="swiper-slide box">
+            <div class="image">
+              <img
+                src="data:image/<%=image.image.contentType%>;base64,
+              <%=image.image.data.toString('base64')%>"
+                alt=""
+              />
+            </div>
+            <div class="content">
+              <h3><%= image.title%></h3>
+              <div class="price"><%= image.price%>DT</div>
+            </div>
+          </a>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="FEAT">
+        <h1>Reviews</h1>
+      </div>
+      <div class="reviewws-boite">
+        <div class="reviews-simple">
+          <div class="utilisateur">
+            <img src="/images/u1.jpg" alt="" />
+            <div class="info_util">
+              <h4>AMANI LAYOUNI</h4>
+              <small>@AMANI</small>
+              <div class="reseux_uti">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            reprehenderit repudiandae architecto quam quo, quod dicta quas vero,
+            tempore nostrum sint eaque esse a harum voluptates! Facilis, amet
+            ea. Ullam!
+          </p>
+        </div>
+        <div class="reviews-simple">
+          <div class="utilisateur">
+            <img src="/images/u2.jpg" alt="" />
+            <div class="info_util">
+              <h4>AAAAAA</h4>
+              <small>@AA</small>
+              <div class="reseux_uti">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt
+            veritatis eveniet atque distinctio, libero doloribus nulla dolorum
+            voluptas odit recusandae ipsam animi commodi expedita soluta
+            asperiores provident ducimus nihil?
+          </p>
+        </div>
+        <div class="reviews-simple">
+          <div class="utilisateur">
+            <img src="/images/u3.jpg" alt="" />
+            <div class="info_util">
+              <h4>AAAAA</h4>
+              <small>@AAAAA</small>
+              <div class="reseux_uti">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit, amet coipisicing elit. Provident natus
+            ducimus excepturi nostrum reprehenderit libero desert saepe maiores
+            sequi voluptate animi ipsam delectus in rrrr.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="logo">
+        <a href="#" class="logo"><i class="fa-solid fa-book"></i> BOOKLAND </a>
+      </div>
+      <div class="links">
+        <h1>Links</h1>
+        <a href="#home">Home</a><br /><br />
+        <a href="#featured">Featured</a><br /><br />
+        <a href="#arrivals">Arrivals</a><br /><br />
+        <a href="#reviews">Reviews</a>
+      </div>
+      <div class="cn">
+        <h1>Contacts</h1>
+        <br />
+        <a href="#"> <i class="fa-solid fa-phone"> </i>+216 99 11 59 16</a
+        ><br /><br />
+
+        <a href="#"><i class="fa-solid fa-envelope"> </i>BOOKLAND@gmail.com</a>
+        <br /><br />
+
+        <a href="#"><i class="fa-solid fa-location-dot"></i> Sousse </a>
+      </div>
+
+      <div class="sm">
+        <h1>Follow Us</h1>
+        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+        <a href="https://fr.linkedin.com/" class="fab fa-linkedin"></a><br />
+        <a href="https://www.pinterest.fr/" class="fab fa-pinterest"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+      </div>
+    </section>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+    <script>
+      async function postData(
+        url = "http://localhost:3000/panier/add",
+        data = {}
+      ) {
+        console.log(data);
+        // Default options are marked with *
+        try {
+          const response = await fetch(url, {
+            method: "POST", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: "same-origin", // include, *same-origin, omit
+            headers: {
+              "Content-Type": "application/json",
+              // "Content-Type": "application/x-www-form-urlencoded",
+            },
+            redirect: "follow", // manual, *follow, error
+            referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify({ id: data }), // body data type must match "Content-Type" header
+          });
+        } catch (err) {
+          console.log(err);
+        }
+      }
+      const add = async (elem) => {
+        const ids = localStorage.getItem("cart");
+        if (ids === null) {
+          idsArray = [];
+        } else {
+          idsArray = ids.split(" ");
+        }
+        if (!idsArray.includes(elem.id)) {
+          console.log(
+            await postData("http://localhost:3000/panier/add", elem.id)
+          );
+          preventDefault();
+          idsArray.push(elem.id);
+        }
+        ids = idsArray.join(" ");
+        console.log(ids);
+        localStorage.setItem("cart", ids);
+      };
+    </script>
+  </body>
+</html>

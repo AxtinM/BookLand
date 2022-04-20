@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Lobster+Two&family=Poppins:ital,wght@0,500;1,300;1,400;1,600&family=Satisfy&display=swap');
+
+body{
+    background: #f6f2f8;
+}
+
+*{
+    
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+     box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in;
+    
+}
+
+
+
+:root{
+
+    --mauve:#a65edd;
+    --mauvefoncé:#500E68;
+    --noir:#444;
+     --border:.3rem solid rgba(0,0,0,.1);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --m: rgba(170, 157, 208, 0.5) ;
+    --border-hover:.2rem solid #b98ecf;
+    --gris:#666;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--noir);
+} 
+
+section{
+    padding:5rem 9%;
+} 
+
+.header .he1{
+    background:#fff;
+    padding:1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .he1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--noir);
+    font-family: 'Cinzel', serif;
+}
+
+.header .he1 .logo i{
+    color:var( --mauvefoncé);
+}
+
+.header .he1 .search-form{
+    width:50rem;
+    height:5rem;
+    border:3px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background:#fff;
+    display:flex;
+    align-items: center;
+    border-radius: 50px;
+}
+.header .he1 .search-form:hover{
+    border-color: #b5b5b5;
+    
+}
+
+.header .he1 .search-form input{
+    font-size: 1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--noir);
+}
+
+.header .he1 .search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color:var(--noir);
+    cursor: pointer;
+}
+
+.header .he1 .search-form label:hover{
+    color:var(--mauve);
+}
+
+.header .he1 .icons div,
+.header .he1 .icons a{
+    font-size: 14PX;
+    margin-left: 1.3REM;
+    color:var(--noir);
+    cursor: pointer;
+}
+.header .he1 .icons span{
+    font-size: 20PX;
+    margin: 15PX;
+}
+
+.header .he1 .icons div:hover,
+.header .he1 .icons a:hover{
+    color:var(--mauve);
+    
+   
+}
+
+.header .he2{
+    background:var(--mauve);
+}
+
+.header .he2 .navbar{
+    text-align: center;
+}
+
+.header .he2 .navbar a{
+    color:#fff;
+    display: inline-block;
+    padding:1.3rem;
+    margin-right: 30PX;
+    font-size: 1.7rem;
+    
+}
+
+.header .he2 .navbar a:hover{
+    background:var(--mauvefoncé);
+}
+
+.header .he2.active{
+
+    position:fixed ;
+    top:0 ;
+    left:0 ;
+    right:0 ;
+    z-index: 1000 ;
+    
+}
+
+
+
+.home-content {
+    display: flex;
+   
+  }  
+
+.home-content {
+    width: 75%;
+    background: #fff;
+    padding: 20px 30px;
+    margin: 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.1);
+    margin-top: 50PX;
+  }
+
+  .home-content .image img{
+    height: 44rem;
+    box-shadow: 8px 6px 8px  #bababd;
+    cursor: pointer;
+}
+
+.home-content .details{
+    padding: 10PX;
+    margin-left: 60PX;
+    
+}
+.home-content .details h2{
+    font-size: 30PX;
+    color: rgb(65, 64, 64);
+}
+.home-content .details h4{
+    font-size: 17PX;
+    font-weight: 400;
+    color: rgb(40, 39, 39);
+    margin-right: 21REM;
+}
+.home-content .details .stars{
+    font-size: 14PX;
+    font-weight: 400;
+    color:#FF9933;
+    margin-right: 21.5REM;
+   
+}
+.home-content .details .border{
+    border-bottom:3px  solid rgba(11, 9, 9, 0.1);
+   
+}
+.home-content .details .check{
+    display: flex;
+    padding-top: 13PX;
+}
+.home-content .details .check P{
+    font-size: 16PX;
+    padding-left: 11PX;
+    color: #1fa5a3;
+    font-weight: 400;
+   
+}
+.home-content .details .check i{
+    font-size: 17PX;
+   padding-top: 4PX;
+    color: #1fa5a3;
+   
+   
+}
+.home-content .details .boutons{
+    padding-top: 18PX;
+    margin-right: 330PX;
+}
+
+
+.btn{
+ 
+    font-size: 13PX;
+    display:inline-block;
+    padding:.8rem 2.5rem;
+    border-radius: 100PX;
+    color:black;
+    cursor: pointer;
+    align-items: center;
+    border: 2.3px solid #5a5757;
+    transition: 0.3s ease-in-out;
+   
+    
+}
+.btn:hover{
+    background:rgb(250, 236, 255);
+}
+
+.home-content h3 {
+    font-size: 17PX ;
+    margin-right: 355PX;
+    padding-top: 18PX;
+    color: rgb(65, 64, 64);
+
+}
+.home-content .details .bookdetails table{
+    font-size: 15PX ;
+    margin-right: 200PX;
+    padding-top: 18PX;
+}
+.home-content .details .bookdetails .a{
+    font-size:17PX ;
+    color:#500E68 ;
+    font-weight: 500;
+}
+.home-content .details .descr p{
+    font-size: 15PX ;
+    margin-right: 410PX;
+    padding-top: 18PX;
+}
+
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    background-color:#f5ebfc;
+    border-bottom: var(--border);
+    margin-top: 35PX;
+}
+
+.contact .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:var(--noir);
+    font-family: 'Cinzel', serif;
+}
+.contact .logo i{
+    color: var(--mauvefoncé);
+}
+.contact h1{
+    font-size: 20px
+    
+}
+.contact .links a{
+    font-size: 16PX ;
+    text-decoration: none;
+    color: black;
+ 
+}
+.contact .cn a{
+    font-size: 14PX;
+    margin-top: 10PX;
+    color: black;
+}
+.contact .cn i{
+    margin-right: 10PX;
+    color:#500E68 ;
+}
+
+.contact .sm a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 25PX;
+    color:black;
+    margin:0 .3rem;
+  
+}
+.contact .sm a:hover{
+    color:var(--mauve) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
