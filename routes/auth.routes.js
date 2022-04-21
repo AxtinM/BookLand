@@ -44,7 +44,6 @@ router.post("/login", loginValidator, userValidation, async (req, res) => {
       }
 
       localStorage.setItem("token", token);
-      console.log(localStorage.getItem("token"));
 
       res.redirect("/home");
     } else {

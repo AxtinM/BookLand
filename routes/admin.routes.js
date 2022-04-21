@@ -56,7 +56,6 @@ router.post("/login", loginValidator, userValidation, async (req, res) => {
       }
 
       localStorage.setItem("token", token);
-      console.log(localStorage.getItem("token"));
 
       res.redirect("/admin");
     } else {
@@ -77,7 +76,6 @@ router.get("/register", (req, res) => {
 });
 
 router.post("/register", registerValidator, userValidation, (req, res) => {
-  // console.log(req.body);
   try {
     if (!req.error) {
       const { name, email, password } = req.body;
@@ -102,7 +100,6 @@ router.post("/register", registerValidator, userValidation, (req, res) => {
 router.get("/book/edit/:id", isAuth, isAdmin, async (req, res) => {
   const id = req.params.id;
   const item = await Book.findById(id);
-  console.log(item);
   res.render("edit", { item: item });
 });
 
@@ -123,7 +120,6 @@ router.get("/book/edit/:id", isAuth, isAdmin, async (req, res) => {
 // });
 
 router.get("/book/delete/:id", isAuth, isAdmin, async (req, res) => {
-  console.log("first");
   const id = req.params.id;
   await Book.findByIdAndDelete(id);
   res.redirect("/admin");
